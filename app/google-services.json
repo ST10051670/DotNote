@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "774616297831",
+    "project_id": "dotnote-33446",
+    "storage_bucket": "dotnote-33446.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774616297831:android:4d2efdd7e01333d3923fc2",
+        "android_client_info": {
+          "package_name": "com.example.dotnote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774616297831-u22sh11uvu5pto6ijohjq6pg8t1ldngp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCABENskErRhKxLFQENl4kJOewxUuiRijY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774616297831-u22sh11uvu5pto6ijohjq6pg8t1ldngp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
