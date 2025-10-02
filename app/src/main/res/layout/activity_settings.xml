@@ -1,35 +1,179 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="24dp"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorBackground">  <!-- Use themed background -->
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Settings Page"
-        android:textSize="20sp"
-        android:layout_marginBottom="16dp"
-        android:textColor="?attr/colorOnBackground"/> <!-- Use themed text color -->
+    android:background="?attr/colorBackground"
+    android:padding="24dp">
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="top">
 
+        <!-- Page Title -->
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Dark Mode"
-            android:textSize="18sp"
-            android:textColor="?attr/colorOnBackground"/> <!-- Themed color -->
-
-        <Switch
-            android:id="@+id/switchDarkMode"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_marginBottom="24dp" />
 
-</LinearLayout>
+        <!-- Appearance Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appearance"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Dark Mode -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dark Mode"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnBackground" />
+
+                <Switch
+                    android:id="@+id/switchDarkMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorOnSurface"
+                android:alpha="0.1"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Focus Mode -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Focus Mode"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnBackground" />
+
+                <Switch
+                    android:id="@+id/switchFocusMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Text Options Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text Options"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Text Size -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text Size"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnBackground"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupTextSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="Small" />
+
+                <RadioButton
+                    android:id="@+id/radioMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="Medium" />
+
+                <RadioButton
+                    android:id="@+id/radioLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="Large" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorOnSurface"
+                android:alpha="0.1"
+                android:layout_marginVertical="8dp" />
+
+            <!-- Font Style -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Font Style"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnBackground" />
+
+                <Spinner
+                    android:id="@+id/spinnerFontStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
